@@ -3,6 +3,7 @@ import {
   Search, MapPin, Star, User, Building2, Briefcase, Menu, X, ArrowRight, ArrowUpRight,
   Plus, CheckCircle2, LogIn, Sun, Moon, Sparkles, Link2, ShieldCheck, Clock, ImagePlus,
   Eye, MessageCircle, LogOut, Send, Video, Navigation, UserCheck, Camera,
+  Instagram, Mail,
 } from "lucide-react";
 import logo from "./assets/aptura-logo.png";
 import { supabase } from "./lib/supabaseClient";
@@ -1784,6 +1785,24 @@ export default function Aptura() {
       <footer className="ia-border" style={{ borderTopWidth: 1 }}>
         <div className="flex flex-col items-center gap-2 py-8 text-center px-6">
           <p className="ia-text-soft text-sm font-medium">{FOOTER_LINE}</p>
+          <div className="flex items-center gap-4 mt-1">
+            <a
+              href="https://www.instagram.com/aptura.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram do aptura.co"
+              className="ia-text-soft hover:text-[var(--accent)] transition-colors"
+            >
+              <Instagram size={18} />
+            </a>
+            <a
+              href="mailto:aptura.coo@gmail.com"
+              aria-label="Enviar email para aptura.co"
+              className="ia-text-soft hover:text-[var(--accent)] transition-colors flex items-center gap-1.5 text-xs"
+            >
+              <Mail size={16} /> aptura.coo@gmail.com
+            </a>
+          </div>
           <p className="ia-text-faint text-xs">© 2026 {BRAND}. Todos os direitos reservados.</p>
           {currentUser?.isModerator && (
             <button onClick={() => setPage("painel-moderador")} className="ia-text-faint text-xs underline mt-1">Painel do moderador</button>
